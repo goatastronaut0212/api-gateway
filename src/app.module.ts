@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { AccountModule } from './account/account.module';
+import { AccountServiceModule } from './account-service/account-service.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -14,10 +12,10 @@ import { AuthModule } from './auth/auth.module';
         options: { host: '127.0.0.1', port: 4001 },
       },
     ]),
-    AccountModule,
+    AccountServiceModule,
     AuthModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
