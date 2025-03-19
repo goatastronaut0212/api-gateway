@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Inject, Post } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 
-@Controller('account')
+@Controller('v1')
 export class AccountServiceController {
   constructor(
     @Inject('ACCOUNT_SERVICE') private readonly client: ClientProxy,
