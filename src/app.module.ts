@@ -1,6 +1,6 @@
+import { BusManagementServiceModule } from './bus-management-service/bus-management-service.module';
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { AccountServiceModule } from './account-service/account-service.module';
 
 @Module({
   imports: [
@@ -10,8 +10,13 @@ import { AccountServiceModule } from './account-service/account-service.module';
         transport: Transport.TCP,
         options: { host: '127.0.0.1', port: 4001 },
       },
+      {
+        name: 'BUS_MANAGEMENT_SERVICE',
+        transport: Transport.TCP,
+        options: { host: '127.0.0.1', port: 4002 },
+      },
     ]),
-    AccountServiceModule,
+    BusManagementServiceModule,
   ],
   controllers: [],
   providers: [],
