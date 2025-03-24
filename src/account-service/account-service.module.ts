@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AccountController } from './account.controller';
+import { AccountController } from './account/account.controller';
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { AccountService } from './account.service';
+import { AccountService } from './account/account.service';
+import { AuthController } from './auth/auth.controller';
+import { AuthService } from './auth/auth.service';
 
 @Module({
   imports: [
@@ -13,8 +15,8 @@ import { AccountService } from './account.service';
       },
     ]),
   ],
-  controllers: [AccountController],
-  providers: [AccountService],
+  controllers: [AccountController, AuthController],
+  providers: [AccountService, AuthService],
 })
 export class AccountServiceModule {}
   
