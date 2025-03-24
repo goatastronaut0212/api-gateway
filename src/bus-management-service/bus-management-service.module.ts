@@ -1,7 +1,8 @@
 import { ClientsModule, Transport } from '@nestjs/microservices';
-import { CompanyController } from './company.controller';
+import { CompanyController } from './company/company.controller';
 import { Module } from '@nestjs/common';
 import { OfficeController } from './office.controller';
+import { CompanyService } from './company/company.service';
 
 @Module({
   imports: [
@@ -14,6 +15,6 @@ import { OfficeController } from './office.controller';
     ]),
   ],
   controllers: [CompanyController, OfficeController],
-  providers: [],
+  providers: [CompanyService],
 })
 export class BusManagementServiceModule {}
