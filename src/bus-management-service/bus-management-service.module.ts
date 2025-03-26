@@ -4,6 +4,10 @@ import { Module } from '@nestjs/common';
 import { OfficeController } from './office/office.controller';
 import { CompanyService } from './company/company.service';
 import { OfficeService } from './office/office.service';
+import { RouteController } from './route/route.controller';
+import { RouteService } from './route/route.service';
+import { SeatController } from './seat/seat.controller';
+import { SeatService } from './seat/seat.service';
 
 @Module({
   imports: [
@@ -15,7 +19,7 @@ import { OfficeService } from './office/office.service';
       },
     ]),
   ],
-  controllers: [CompanyController, OfficeController],
-  providers: [CompanyService, OfficeService],
+  controllers: [CompanyController, OfficeController, RouteController, SeatController],
+  providers: [CompanyService, OfficeService, RouteService, SeatService],
 })
 export class BusManagementServiceModule {}
