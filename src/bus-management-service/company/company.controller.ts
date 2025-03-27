@@ -3,7 +3,6 @@ import {
   Controller,
   Delete,
   Get,
-  Inject,
   Param,
   Post,
   Put,
@@ -20,7 +19,7 @@ export class CompanyController {
     return this.companyService.createCompany(data);
   }
   @Get('/get-all')
-  getAllCompanies() { 
+  getAllCompanies() {
     return this.companyService.getAllCompanies();
   }
   @Put('/update-company/:id')
