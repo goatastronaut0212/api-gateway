@@ -9,5 +9,11 @@ export class AuthController {
   googleLogin(@Body() data: any) {
     return this.authService.googleLogin(data);
   }
+
+  // E1.UC1: Username/Password Login
+  @Post('/bms-login')
+  bmsLogin(@Body() data: any) {
+    return this.authService.bmsLogin(data);
+  }
   
 }
