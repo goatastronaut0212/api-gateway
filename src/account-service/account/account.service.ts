@@ -31,4 +31,11 @@ export class AccountService {
   updateAvatarAccount(id: string, url_avatar: any) {
     return this.client.send('update_avatar_account', { id, url_avatar });
   }
+  getAllAccountByCompany(id: number) {
+    return this.client.send('get_all_account_by_company', { id });
+  }
+
+  deleteAccount(id: string) {
+    return this.client.send('delete_account', { id });
+  }
 }

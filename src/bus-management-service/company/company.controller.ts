@@ -18,7 +18,7 @@ export class CompanyController {
     console.log('Sending request to Bus Management Service:', data);
     return this.companyService.createCompany(data);
   }
-  @Get('/get-all')
+  @Get('/get-all/:id')
   getAllCompanies() {
     return this.companyService.getAllCompanies();
   }

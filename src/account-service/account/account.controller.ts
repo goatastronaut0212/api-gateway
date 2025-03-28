@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
 import { AccountService } from './account.service';
 
 @Controller('v1/account')
@@ -22,5 +22,15 @@ export class AccountController {
   @Put('/update-avatar-account/:id')
   updateAvatarAccount(@Param('id') id: string, @Body() url_avatar: any) {
     return this.accountService.updateAvatarAccount(id, url_avatar);
+  }
+
+  @Get('/get-all-account-by-company/:id')
+  getAllAccountByCompany(@Param('id') id: number) {
+    return this.accountService.getAllAccountByCompany(id);
+  }
+
+  @Delete('/delete-account/:id')
+  deleteAccount(@Param('id') id: string) {
+    return this.accountService.deleteAccount(id);
   }
 }
