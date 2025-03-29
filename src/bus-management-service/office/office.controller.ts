@@ -18,9 +18,9 @@ export class OfficeController {
   createOffice(@Body() data: any) {
     return this.officeService.createOffice(data);
   }
-  @Get('/get-office-by-company/:companyId')
-  getOfficesByCompany(@Param('companyId') companyId: any) {
-    return this.officeService.getOfficesByCompany(companyId);
+  @Get('/get-offices-by-company/:id')
+  getOfficesByCompany(@Param('id') id: any) {
+    return this.officeService.getOfficesByCompany(id);
   }
   @Get('/get-office-name-by-company/:companyId')
   getOfficeNameByCompany(@Param('companyId') companyId: number) {

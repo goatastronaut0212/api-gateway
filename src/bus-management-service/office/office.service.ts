@@ -7,10 +7,11 @@ export class OfficeService {
     @Inject('BUS_MANAGEMENT_SERVICE') private readonly office: ClientProxy,
   ) {}
   createOffice(data: any) {
+    console.log('data', data);
     return this.office.send('create_office', data);
   }
-    getOfficesByCompany(companyId: any) {
-        return this.office.send('get_offices_by_company', companyId);
+    getOfficesByCompany(id: any) {
+        return this.office.send('get_offices_by_company', id);
     }
     getOfficeNameByCompany(companyId: number) {
         return this.office.send('get_office_name_by_company', companyId);
