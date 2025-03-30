@@ -13,8 +13,8 @@ export class OfficeService {
     getOfficesByCompany(id: any) {
         return this.office.send('get_offices_by_company', id);
     }
-    getOfficeNameByCompany(companyId: number) {
-        return this.office.send('get_office_name_by_company', companyId);
+    getOfficeNameByCompany(id: number) {
+        return this.office.send('get_office_name_by_company', id);
     }
     updateOffice(id: number, data: any) {
         return this.office.send('update_office', { id, data });
