@@ -24,4 +24,8 @@ export class SeatController {
   updateSeat(@Param("id") id: number, @Body() data: any) {
     return this.seatService.updateSeatMap(id, data);
   }
+  @Get('/get-seat-map-name-by-company/:id')
+  getSeatMapName(@Param("id") id: number) {
+    return this.seatService.getSeatMapName(id);
+  }
 }

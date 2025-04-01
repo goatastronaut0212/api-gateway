@@ -25,7 +25,7 @@ export class RouteController {
     console.log('Sending request to Service:', id);
     return this.routeService.getRoute(id);
   }
-  @Get('get-route-name-by-company/:id')
+  @Get('get-routes-name-by-company/:id')
   getRouteName(@Param('id') id: number) {
     console.log('Sending request to Service:', id);
     return this.routeService.getRouteName(id);

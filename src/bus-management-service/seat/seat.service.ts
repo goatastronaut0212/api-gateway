@@ -24,5 +24,9 @@ export class SeatService {
     console.log('Sending request to Bus Management Service:', data);
     return this.seat.send('update_seat_map', { id, data });
   }
+  getSeatMapName(id: number) {
+    console.log('Sending request to Bus Management Service:', id);
+    return this.seat.send('get_seat_map_name_by_company', id);
+  }
 }
  

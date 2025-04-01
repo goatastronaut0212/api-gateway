@@ -10,6 +10,8 @@ import { SeatController } from './seat/seat.controller';
 import { SeatService } from './seat/seat.service';
 import { VehicleController } from './vehicle/vehicle.controller';
 import { VehicleService } from './vehicle/vehicle.service';
+import { ScheduleController } from './schedule/schedule.controller';
+import { ScheduleService } from './schedule/schedule.service';
 
 @Module({
   imports: [
@@ -27,7 +29,8 @@ import { VehicleService } from './vehicle/vehicle.service';
     RouteController,
     SeatController,
     VehicleController,
-    RouteController
+    RouteController,
+    ScheduleController,
   ],
   providers: [
     CompanyService,
@@ -35,7 +38,8 @@ import { VehicleService } from './vehicle/vehicle.service';
     RouteService,
     SeatService,
     VehicleService,
-    RouteService
+    RouteService,
+    ScheduleService,
   ],
 })
 export class BusManagementServiceModule {}
