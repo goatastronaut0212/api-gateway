@@ -22,5 +22,8 @@ export class RouteService {
   getRouteName(id: any) {
     return this.route.send("get_route_name_by_company", id);
   }
+  moveTopRoute(id: number) {
+    return this.route.send("move_top_route", id);
+  }
   
 }
