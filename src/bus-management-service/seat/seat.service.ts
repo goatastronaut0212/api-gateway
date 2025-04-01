@@ -25,3 +25,4 @@ export class SeatService {
     return this.seat.send('update_seat_map', { id, data });
   }
 }
+ 

@@ -27,6 +27,7 @@ import { VehicleService } from './vehicle/vehicle.service';
     RouteController,
     SeatController,
     VehicleController,
+    RouteController
   ],
   providers: [
     CompanyService,
@@ -34,6 +35,7 @@ import { VehicleService } from './vehicle/vehicle.service';
     RouteService,
     SeatService,
     VehicleService,
+    RouteService
   ],
 })
 export class BusManagementServiceModule {}
