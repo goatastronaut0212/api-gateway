@@ -12,6 +12,10 @@ import { VehicleController } from './vehicle/vehicle.controller';
 import { VehicleService } from './vehicle/vehicle.service';
 import { ScheduleController } from './schedule/schedule.controller';
 import { ScheduleService } from './schedule/schedule.service';
+import { LocationController } from './location/location.controller';
+import { LocationService } from './location/location.service';
+import { PointController } from './point/point.controller';
+import { PointService } from './point/point.service';
 
 @Module({
   imports: [
@@ -31,6 +35,8 @@ import { ScheduleService } from './schedule/schedule.service';
     VehicleController,
     RouteController,
     ScheduleController,
+    LocationController, 
+    PointController
   ],
   providers: [
     CompanyService,
@@ -40,6 +46,8 @@ import { ScheduleService } from './schedule/schedule.service';
     VehicleService,
     RouteService,
     ScheduleService,
+    LocationService, 
+    PointService
   ],
 })
 export class BusManagementServiceModule {}

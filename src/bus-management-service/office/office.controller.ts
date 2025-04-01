@@ -19,6 +19,7 @@ export class OfficeController {
   }
   @Get('/get-offices-by-company/:id')
   getOfficesByCompany(@Param('id') id: any) {
+    console.log('id', id);
     return this.officeService.getOfficesByCompany(id);
   }
   @Get('/get-office-name-by-company/:id')
