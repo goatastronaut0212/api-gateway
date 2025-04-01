@@ -22,4 +22,13 @@ export class PointService {
   getPointNameByCompany(id: number) {
     return this.point.send('get_point_name_by_company', id);
   }
+
+  createPointOfRoute(data: any) {
+    console.log('data', data);
+    return this.point.send('create_point_of_route', data);
+  }
+  getPointOfRouteByRoute(id: number) {
+    console.log('id', id);
+    return this.point.send('get_point_of_route_by_route', id);
+  }
 }

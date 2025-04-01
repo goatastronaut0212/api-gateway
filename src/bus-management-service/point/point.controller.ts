@@ -35,6 +35,18 @@ export class PointController {
   }
   @Get('/get-point-name-by-company/:id')
   getPointNameByCompany(@Param('id') id: number) {
+    console.log('id', id);
     return this.pointService.getPointNameByCompany(id);
+  }
+
+  @Post('/create-point-of-route')
+  createPointOfRoute(@Body() data: any) {
+    console.log('data', data);
+    return this.pointService.createPointOfRoute(data);
+  }
+
+  @Get('/get-point-of-route-by-route/:id')
+  getPointOfRouteByRoute(@Param('id') id: number) {
+    return this.pointService.getPointOfRouteByRoute(id);
   }
 }
