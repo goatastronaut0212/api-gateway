@@ -16,6 +16,8 @@ import { LocationController } from './location/location.controller';
 import { LocationService } from './location/location.service';
 import { PointController } from './point/point.controller';
 import { PointService } from './point/point.service';
+import { TripController } from './trip/trip.controller';
+import { TripService } from './trip/trip.service';
 
 @Module({
   imports: [
@@ -36,7 +38,8 @@ import { PointService } from './point/point.service';
     RouteController,
     ScheduleController,
     LocationController, 
-    PointController
+    PointController,
+    TripController,
   ],
   providers: [
     CompanyService,
@@ -47,7 +50,8 @@ import { PointService } from './point/point.service';
     RouteService,
     ScheduleService,
     LocationService, 
-    PointService
+    PointService,
+    TripService,
   ],
 })
 export class BusManagementServiceModule {}
