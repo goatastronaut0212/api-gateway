@@ -13,4 +13,9 @@ export class TripController {
     getTripDetailOnPlatform(@Param("id") id: any) {
         return this.tripService.getTripDetailOnPlatform(id);
     }
+
+    @Post("/get-trip-by-date-and-route")
+    getTripsByDateAndRouteAPI(@Body() data: any) {
+        return this.tripService.getTripsByDateAndRouteAPI(data);
+    }
 }

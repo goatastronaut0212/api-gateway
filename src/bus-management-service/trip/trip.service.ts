@@ -15,4 +15,8 @@ export class TripService {
     console.log('Sending request to Bus Management Service:', id);
     return this.client.send('get_trip_detail_on_platform', id);
   }
+  getTripsByDateAndRouteAPI(data: any) {
+    console.log('Sending request to Bus Management Service:', data);
+    return this.client.send('get_trips_by_date_and_route', data);
+  }
 }
