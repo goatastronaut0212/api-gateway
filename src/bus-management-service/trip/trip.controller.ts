@@ -18,4 +18,14 @@ export class TripController {
     getTripsByDateAndRouteAPI(@Body() data: any) {
         return this.tripService.getTripsByDateAndRouteAPI(data);
     }
+
+    @Get("/get-point-up-by-trip/:id")
+    getPointUpByTrip(@Param("id") id: any) {
+        return this.tripService.getPointUpByTrip(id);
+    }
+
+    @Get("/get-point-down-by-trip/:id")
+    getPointDownByTrip(@Param("id") id: any) {
+        return this.tripService.getPointDownByTrip(id);
+    }
 }

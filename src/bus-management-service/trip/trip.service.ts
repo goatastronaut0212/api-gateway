@@ -19,4 +19,12 @@ export class TripService {
     console.log('Sending request to Bus Management Service:', data);
     return this.client.send('get_trips_by_date_and_route', data);
   }
+  getPointUpByTrip(id: any) {
+    console.log('Sending request to Bus Management Service:', id);
+    return this.client.send('get_point_up_by_trip', id);
+  }
+  getPointDownByTrip(id: any) {
+    console.log('Sending request to Bus Management Service:', id);
+    return this.client.send('get_point_down_by_trip', id);
+  }
 }
