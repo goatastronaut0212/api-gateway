@@ -39,4 +39,12 @@ export class CompanyController {
   unlockCompany(@Param('id') id: number) {
     return this.companyService.unlockCompany(id);
   }
+  @Post('/create-policy/:id')
+  createPolicy(@Param('id') id: number, @Body() data: any) {
+    return this.companyService.createPolicy(id, data);
+  }
+  @Get('/get-policy/:id')
+  getPolicy(@Param('id') id: number) {
+    return this.companyService.getPolicy(id);
+  }
 }

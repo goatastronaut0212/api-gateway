@@ -26,4 +26,10 @@ export class CompanyService {
   unlockCompany(id: number) {
     return this.company.send('unlock_company', id);
   }
+  createPolicy(id: number, data: any) {
+    return this.company.send('create_policy', { id, data });
+  }
+  getPolicy(id: number) {
+    return this.company.send('get_policy', id);
+  }
 }
