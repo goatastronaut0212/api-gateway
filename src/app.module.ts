@@ -2,6 +2,7 @@ import { BusManagementServiceModule } from './bus-management-service/bus-managem
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AccountServiceModule } from './account-service/account-service.module';
+import { PaymentServiceModule } from './payment-service/payment-service.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { AccountServiceModule } from './account-service/account-service.module';
     ]),
     BusManagementServiceModule,
     AccountServiceModule,
+    PaymentServiceModule,
   ],
   controllers: [],
   providers: [],
