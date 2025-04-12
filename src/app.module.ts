@@ -17,6 +17,11 @@ import { PaymentServiceModule } from './payment-service/payment-service.module';
         transport: Transport.TCP,
         options: { host: '127.0.0.1', port: 4002 },
       },
+      {
+        name: 'PAYMENT_SERVICE',
+        transport: Transport.TCP,
+        options: { host: '127.0.0.1', port: 4003 }
+      }
     ]),
     BusManagementServiceModule,
     AccountServiceModule,
