@@ -1,14 +1,12 @@
-import { Controller, Get, Post } from "@nestjs/common";
-import { ZalopayService } from "./zalopay.service";
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { ZalopayService } from './zalopay.service';
 
-@Controller("v3/zalopay")
+@Controller('v3/zalopay')
 export class ZalopayController {
-    constructor(private readonly zalopayService: ZalopayService) {}
+  constructor(private readonly zalopayService: ZalopayService) {}
 
-    @Get("zalopay")
-    async Test(
-        
-    ) {
-        return "2"
-    }
+  @Post('create-payment')
+  async createPayment(@Body() data: any) {
+    return this.zalopayService.createPayment(data);
+  }
 }
