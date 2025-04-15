@@ -11,7 +11,7 @@ import { AuthService } from './auth/auth.service';
       {
         name: 'ACCOUNT_SERVICE',
         transport: Transport.TCP,
-        options: { host: 'https://api-gateway-perj.onrender.com', port: 4001 },
+        options: { host: '127.0.0.1', port: 4001 },
       },
     ]),
   ],
