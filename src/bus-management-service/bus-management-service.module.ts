@@ -27,7 +27,7 @@ import { TicketService } from './ticket/ticket.service';
       {
         name: 'BUS_MANAGEMENT_SERVICE',
         transport: Transport.TCP,
-        options: { host: '127.0.0.1', port: 4002 },
+        options: { host: 'https://api-gateway-perj.onrender.com', port: 4002 },
       },
     ]),
   ],
