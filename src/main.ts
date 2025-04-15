@@ -8,7 +8,7 @@ async function bootstrap() {
   app.connectMicroservice<MicroserviceOptions>({
     transport: Transport.TCP,
     options: {
-      host: 'https://api-gateway-perj.onrender.com',
+      host: '127.0.0.1',
       port: 4000,
     },
   });
