@@ -11,4 +11,10 @@ export class TicketService {
     console.log('Sending request to Bus Management Service:', id);
     return this.client.send('get_ticket_by_trip', id);
   }
+  changeTicketBooked(data: any) {
+    return this.client.send('change_ticket_booked', data);
+  }
+  changeTicketAvailable(data: any) {
+    return this.client.send('change_ticket_available', data);
+  }
 }
