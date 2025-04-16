@@ -27,7 +27,7 @@ import { TicketService } from './ticket/ticket.service';
       {
         name: 'BUS_MANAGEMENT_SERVICE',
         transport: Transport.TCP,
-        options: { host: '127.0.0.1', port: 4002 },
+        options: { host: '103.216.118.72', port: 4002 },
       },
     ]),
   ],
@@ -39,7 +39,7 @@ import { TicketService } from './ticket/ticket.service';
     VehicleController,
     RouteController,
     ScheduleController,
-    LocationController, 
+    LocationController,
     PointController,
     TripController,
     TicketController
@@ -52,10 +52,10 @@ import { TicketService } from './ticket/ticket.service';
     VehicleService,
     RouteService,
     ScheduleService,
-    LocationService, 
+    LocationService,
     PointService,
     TripService,
     TicketService
   ],
 })
-export class BusManagementServiceModule {}
+export class BusManagementServiceModule { }
