@@ -15,7 +15,7 @@ import { ZalopayService } from './zalopay/zalopay.service';
       {
         name: 'PAYMENT_SERVICE',
         transport: Transport.TCP,
-        options: { host: '103.216.118.72', port: 4003 },
+        options: { host: '0.0.0.0', port: 4003 },
       },
     ]),
   ],

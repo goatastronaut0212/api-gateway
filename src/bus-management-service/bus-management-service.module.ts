@@ -27,7 +27,7 @@ import { TicketService } from './ticket/ticket.service';
       {
         name: 'BUS_MANAGEMENT_SERVICE',
         transport: Transport.TCP,
-        options: { host: '103.216.118.72', port: 4002 },
+        options: { host: '0.0.0.0', port: 4002 },
       },
     ]),
   ],
