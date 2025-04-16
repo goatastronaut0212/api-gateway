@@ -17,4 +17,7 @@ export class TicketService {
   changeTicketAvailable(data: any) {
     return this.client.send('change_ticket_available', data);
   }
+  updateTicketOnPlatform(data: any) {
+    return this.client.send('update_ticket_on_platform', data);
+  }
 }

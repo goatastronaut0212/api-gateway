@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Put } from '@nestjs/common';
 import { TicketService } from './ticket.service';
 
 @Controller('v2/ticket')
@@ -19,6 +19,11 @@ export class TicketController {
   @Post('change-ticket-available')
   changeTicketAvailable(@Body() data: any) {
     return this.ticketService.changeTicketAvailable(data);
+  }
+
+  @Post('update-ticket-on-platform')
+  updateTicketOnPlatform(@Body() data: any) {
+    return this.ticketService.updateTicketOnPlatform(data);
   }
 
 }
