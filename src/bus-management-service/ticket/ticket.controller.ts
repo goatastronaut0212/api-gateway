@@ -26,4 +26,8 @@ export class TicketController {
     return this.ticketService.updateTicketOnPlatform(data);
   }
 
+  @Put('update-ticket-info-on-bms')
+  updateTicketInfoOnBMS(@Body() data: any) {
+    return this.ticketService.updateTicketInfoOnBMS(data);
+  }
 }

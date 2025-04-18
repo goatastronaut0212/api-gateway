@@ -20,4 +20,7 @@ export class TicketService {
   updateTicketOnPlatform(data: any) {
     return this.client.send('update_ticket_on_platform', data);
   }
+  updateTicketInfoOnBMS(data: any) {
+    return this.client.send('update_ticket_info_on_bms', data);
+  }
 }
