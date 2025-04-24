@@ -12,6 +12,11 @@ export class AuthService {
     return this.client.send('google_login', data);
   }
 
+  facebookLogin(data: any) {
+    console.log('📥 Nhận dữ liệu đăng nhập Facebook:', data);
+    return this.client.send('facebook_login', data);
+  }
+
   // E1.UC1: Username/Password Login
   bmsLogin(data: any) {
     console.log('📥 Nhận dữ liệu đăng nhập BMS:', data);
