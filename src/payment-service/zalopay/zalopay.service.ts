@@ -10,4 +10,8 @@ export class ZalopayService {
   async createPayment(data: any) {
     return this.client.send('create_payment', data);
   }
+
+  async callbackZaloPay(data: any) {
+    return this.client.send('callback_zalopay', data);
+  }
 }
