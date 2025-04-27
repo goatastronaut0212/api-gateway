@@ -14,4 +14,8 @@ export class ZalopayService {
   async callbackZaloPay(data: any) {
     return this.client.send('callback_zalopay', data);
   }
+
+  async checkPayment(data: any) {
+    return this.client.send('check_payment', data);
+  }
 }

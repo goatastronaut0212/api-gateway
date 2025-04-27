@@ -14,4 +14,9 @@ export class ZalopayController {
   async callbackZaloPay(@Body() data: any) {
     return this.zalopayService.callbackZaloPay(data);
   }
+
+  @Post('check-payment')
+  async checkPayment(@Body() data: any) {    
+    return this.zalopayService.checkPayment(data);
+  }
 }
