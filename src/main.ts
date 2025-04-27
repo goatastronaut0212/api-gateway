@@ -13,7 +13,11 @@ async function bootstrap() {
     },
   });
   app.enableCors({
-    origin: ['http://localhost:3000', 'http://localhost:3001'],
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'https://4084-2001-ee0-4f00-57d0-409-89b9-d937-f25a.ngrok-free.app',
+    ],
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
     credentials: true,
