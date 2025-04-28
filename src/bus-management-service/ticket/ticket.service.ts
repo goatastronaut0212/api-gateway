@@ -23,4 +23,8 @@ export class TicketService {
   updateTicketInfoOnBMS(data: any) {
     return this.client.send('update_ticket_info_on_bms', data);
   }
+  searchTicketOnPlatform(data: any) {
+    return this.client.send('search_ticket_on_platform', data);
+  }
+
 }

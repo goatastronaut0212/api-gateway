@@ -30,4 +30,9 @@ export class TicketController {
   updateTicketInfoOnBMS(@Body() data: any) {
     return this.ticketService.updateTicketInfoOnBMS(data);
   }
+
+  @Post('search-ticket-on-platform')
+  searchTicketOnPlatform(@Body() data: any) {
+    return this.ticketService.searchTicketOnPlatform(data);
+  }
 }
