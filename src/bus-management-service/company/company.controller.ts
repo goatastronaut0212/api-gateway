@@ -47,4 +47,8 @@ export class CompanyController {
   getPolicy(@Param('id') id: number) {
     return this.companyService.getPolicy(id);
   }
+  @Post('/register-sale-ticket-on-platform')
+  registerSaleTicketOnPlatform(@Body() data: any) {
+    return this.companyService.registerSaleTicketOnPlatform(data);
+  }
 }

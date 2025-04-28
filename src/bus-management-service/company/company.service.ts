@@ -1,5 +1,5 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { ClientProxy } from "@nestjs/microservices";
+import { Inject, Injectable } from '@nestjs/common';
+import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class CompanyService {
@@ -31,5 +31,8 @@ export class CompanyService {
   }
   getPolicy(id: number) {
     return this.company.send('get_policy', id);
+  }
+  registerSaleTicketOnPlatform(data: any) {
+    return this.company.send('register_sale_ticket_on_platform', data);
   }
 }
