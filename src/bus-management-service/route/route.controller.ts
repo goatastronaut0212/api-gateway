@@ -1,5 +1,13 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
-import { RouteService } from "./route.service";
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
+import { RouteService } from './route.service';
 
 @Controller('v2/route')
 export class RouteController {
@@ -35,5 +43,15 @@ export class RouteController {
   moveTopRoute(@Param('id') id: number) {
     console.log('Sending request to Service:', id);
     return this.routeService.moveTopRoute(id);
+  }
+
+  @Post('/create-route-popular')
+  createRoutePopular(@Body() data: any) {
+    return this.routeService.createRoutePopular(data);
+  }
+
+  @Get('/get-list-route-popular')
+  getListRoutePopular() {
+    return this.routeService.getListRoutePopular();
   }
 }
