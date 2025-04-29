@@ -35,4 +35,7 @@ export class CompanyService {
   registerSaleTicketOnPlatform(data: any) {
     return this.company.send('register_sale_ticket_on_platform', data);
   }
+  getSaleTicketOnPlatform() {
+    return this.company.send('get_sale_ticket_on_platform', '');
+  }
 }

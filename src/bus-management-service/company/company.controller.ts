@@ -51,4 +51,9 @@ export class CompanyController {
   registerSaleTicketOnPlatform(@Body() data: any) {
     return this.companyService.registerSaleTicketOnPlatform(data);
   }
+
+  @Get('/get-sale-ticket-on-platform')
+  getSaleTicketOnPlatform() {
+    return this.companyService.getSaleTicketOnPlatform();
+  }
 }
