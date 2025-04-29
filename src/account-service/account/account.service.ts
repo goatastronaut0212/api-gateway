@@ -38,4 +38,18 @@ export class AccountService {
   deleteAccount(id: string) {
     return this.client.send('delete_account', { id });
   }
+
+  createSuperAdminAccount(data: any) {
+    return this.client.send('create_super_admin_account', data);
+  }
+
+  getListSuperAdminAccount() {
+    return this.client.send('get_list_super_admin_account', {});
+  }
+  deleteSuperAdminAccount(id: string) {
+    return this.client.send('delete_super_admin_account', { id });
+  }
+  updateSuperAdminAccount(id: string, data: any) {
+    return this.client.send('update_super_admin_account', { id, data });
+  }
 }

@@ -1,4 +1,12 @@
-import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { AccountService } from './account.service';
 
 @Controller('v1/account')
@@ -32,5 +40,25 @@ export class AccountController {
   @Delete('/delete-account/:id')
   deleteAccount(@Param('id') id: string) {
     return this.accountService.deleteAccount(id);
+  }
+
+  @Post('/create-super-admin-account')
+  createSuperAdminAccount(@Body() data: any) {
+    return this.accountService.createSuperAdminAccount(data);
+  }
+
+  @Get('/get-list-super-admin-account')
+  getListSuperAdminAccount() {
+    return this.accountService.getListSuperAdminAccount();
+  }
+
+  @Delete('/delete-super-admin-account/:id')
+  deleteSuperAdminAccount(@Param('id') id: string) {
+    return this.accountService.deleteSuperAdminAccount(id);
+  }
+
+  @Put('/update-super-admin-account/:id')
+  updateSuperAdminAccount(@Param('id') id: string, @Body() data: any) {
+    return this.accountService.updateSuperAdminAccount(id, data);
   }
 }
