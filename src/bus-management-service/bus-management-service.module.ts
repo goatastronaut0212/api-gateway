@@ -20,6 +20,8 @@ import { TripController } from './trip/trip.controller';
 import { TripService } from './trip/trip.service';
 import { TicketController } from './ticket/ticket.controller';
 import { TicketService } from './ticket/ticket.service';
+import { PolicyController } from './policy/policy.controller';
+import { PolicyService } from './policy/policy.service';
 
 @Module({
   imports: [
@@ -42,7 +44,8 @@ import { TicketService } from './ticket/ticket.service';
     LocationController,
     PointController,
     TripController,
-    TicketController
+    TicketController,
+    PolicyController,
   ],
   providers: [
     CompanyService,
@@ -55,7 +58,8 @@ import { TicketService } from './ticket/ticket.service';
     LocationService,
     PointService,
     TripService,
-    TicketService
+    TicketService,
+    PolicyService,
   ],
 })
-export class BusManagementServiceModule { }
+export class BusManagementServiceModule {}
