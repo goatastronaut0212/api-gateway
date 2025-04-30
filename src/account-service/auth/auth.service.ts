@@ -1,5 +1,5 @@
-import { Inject, Injectable } from "@nestjs/common";
-import { ClientProxy } from "@nestjs/microservices";
+import { Inject, Injectable } from '@nestjs/common';
+import { ClientProxy } from '@nestjs/microservices';
 
 @Injectable()
 export class AuthService {
@@ -21,5 +21,9 @@ export class AuthService {
   bmsLogin(data: any) {
     console.log('📥 Nhận dữ liệu đăng nhập BMS:', data);
     return this.client.send('bms_login', data);
+  }
+
+  superAdminLogin(data: any) {
+    return this.client.send('super_admin_login', data);
   }
 }
