@@ -33,4 +33,10 @@ export class RouteService {
   getListRoutePopular() {
     return this.route.send('get_list_route_popular', {});
   }
+  updateRoutePopular(id: number, data: any) {
+    return this.route.send('update_route_popular', { id, data });
+  }
+  deleteRoutePopular(id: number) {
+    return this.route.send('delete_route_popular', id);
+  }
 }

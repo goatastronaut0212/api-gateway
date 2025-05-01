@@ -54,4 +54,13 @@ export class RouteController {
   getListRoutePopular() {
     return this.routeService.getListRoutePopular();
   }
+
+  @Put('/update-route-popular/:id')
+  updateRoutePopular(@Param('id') id: number, @Body() data: any) {
+    return this.routeService.updateRoutePopular(id, data);
+  }
+  @Delete('/delete-route-popular/:id')
+  deleteRoutePopular(@Param('id') id: number) {
+    return this.routeService.deleteRoutePopular(id);
+  }
 }
