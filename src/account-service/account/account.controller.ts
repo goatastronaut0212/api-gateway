@@ -61,4 +61,24 @@ export class AccountController {
   updateSuperAdminAccount(@Param('id') id: string, @Body() data: any) {
     return this.accountService.updateSuperAdminAccount(id, data);
   }
+
+  @Post('/create-account-by-super-admin')
+  createAccountBySuperAdmin(@Body() data: any) {
+    return this.accountService.createAccountBySuperAdmin(data);
+  }
+
+  @Get('/get-list-account-by-company-on-platform/:id')
+  getListAccountByCompanyOnPlatform(@Param('id') id: number) {
+    return this.accountService.getListAccountByCompanyOnPlatform(id);
+  }
+
+  @Delete('/delete-account-by-super-admin/:id')
+  deleteAccountBySuperAdmin(@Param('id') id: string) {
+    return this.accountService.deleteAccountBySuperAdmin(id);
+  }
+
+  @Put('/update-account-by-super-admin/:id')
+  updateAccountBySuperAdmin(@Param('id') id: string, @Body() data: any) {
+    return this.accountService.updateAccountBySuperAdmin(id, data);
+  }
 }
