@@ -32,4 +32,8 @@ export class TicketService {
   updatePaidTicketAmount(data: any) {
     return this.client.send('update_paid_ticket_amount', data);
   }
+  getTicketByAccountId(id: string) {
+    console.log('Sending request to Bus Management Service:', id);
+    return this.client.send('get_ticket_by_account_id', id);
+  }
 }

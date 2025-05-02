@@ -44,4 +44,8 @@ export class TicketController {
   updatePaidTicketAmount(@Body() data: any) {
     return this.ticketService.updatePaidTicketAmount(data);
   }
+  @Get('get-ticket-by-account-id/:id')
+  getTicketByAccountId(@Param('id') id: string) {
+    return this.ticketService.getTicketByAccountId(id);
+  }
 }
