@@ -35,4 +35,13 @@ export class TicketController {
   searchTicketOnPlatform(@Body() data: any) {
     return this.ticketService.searchTicketOnPlatform(data);
   }
+
+  @Post('create-ticket-by-payment-service')
+  createTicketByPaymentService(@Body() data: any) {
+    return this.ticketService.createTicketByPaymentService(data);
+  }
+  @Post('update-paid-ticket-amount')
+  updatePaidTicketAmount(@Body() data: any) {
+    return this.ticketService.updatePaidTicketAmount(data);
+  }
 }

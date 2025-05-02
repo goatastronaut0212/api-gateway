@@ -26,5 +26,10 @@ export class TicketService {
   searchTicketOnPlatform(data: any) {
     return this.client.send('search_ticket_on_platform', data);
   }
-
+  createTicketByPaymentService(data: any) {
+    return this.client.send('create_ticket_by_payment_service', data);
+  }
+  updatePaidTicketAmount(data: any) {
+    return this.client.send('update_paid_ticket_amount', data);
+  }
 }

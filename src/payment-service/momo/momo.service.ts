@@ -7,15 +7,10 @@ export class MomoService {
     @Inject('PAYMENT_SERVICE') private readonly client: ClientProxy,
   ) {}
 
-  createMoMoPayment(amount: number, orderInfo: string) {
-    return this.client.send('create_momo_payment', { amount, orderInfo });
+  createPayment(data: any) {
+    return this.client.send('create_momo_payment', data);
   }
-
-  momoCallback(query: any) {
-    return this.client.send('momo_callback', query);
-  }
-
-  momoIpn(body: any) {
-    return this.client.send('momo_ipn', body);
+  checkMomoPayment(data: any) {
+    return this.client.send('check_momo_payment', data);
   }
 }
