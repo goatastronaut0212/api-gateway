@@ -6,12 +6,12 @@ export class PolicyController {
   constructor(private readonly policyService: PolicyService) {}
 
   @Post('/create-policy/:id')
-  createPolicy(@Param('id') id: number, @Body() data: any) {
+  createPolicy(@Param('id') id: number, @Body() data: { content: string }) {
     return this.policyService.createPolicy(id, data.content);
   }
 
   @Put('/update-policy/:id')
-  updatePolicy(@Param('id') id: number, @Body() content: string) {
-    return this.policyService.updatePolicy(id, content);
+  updatePolicy(@Param('id') id: number, @Body() data: { content: string }) {
+    return this.policyService.updatePolicy(id, data.content);
   }
 }
