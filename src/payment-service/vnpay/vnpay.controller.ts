@@ -10,7 +10,7 @@ export class VnpayController {
     return this.vnpayService.createPaymentUrl(body);
   }
 
-  @Get('vnpay/return')
+  @Get('/return')
   async handleReturn(@Query() query: any) {
     return this.vnpayService.handlePaymentReturn(query);
   }
