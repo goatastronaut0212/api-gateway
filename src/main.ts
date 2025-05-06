@@ -12,12 +12,18 @@ async function bootstrap() {
       port: 4000,
     },
   });
+  // app.enableCors({
+  //   origin: [
+  //     'http://localhost:3000',
+  //     'http://localhost:3001',
+  //     'https://5519-2001-ee0-4f00-57d0-2c7d-de02-b055-7534.ngrok-free.app',
+  //   ],
+  //   methods: 'GET,POST,PUT,DELETE',
+  //   allowedHeaders: 'Content-Type,Authorization',
+  //   credentials: true,
+  // });
   app.enableCors({
-    origin: [
-      'http://localhost:3000',
-      'http://localhost:3001',
-      'https://5519-2001-ee0-4f00-57d0-2c7d-de02-b055-7534.ngrok-free.app',
-    ],
+    origin: true, // Reflects the request origin
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
     credentials: true,

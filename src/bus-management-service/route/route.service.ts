@@ -20,6 +20,7 @@ export class RouteService {
     return this.route.send('get_route_by_company', id);
   }
   getRouteName(id: any) {
+    console.log('Sending request to Service:', id);
     return this.route.send('get_route_name_by_company', id);
   }
   moveTopRoute(id: number) {

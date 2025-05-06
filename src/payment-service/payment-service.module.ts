@@ -8,6 +8,8 @@ import { MomoController } from './momo/momo.controller';
 import { MomoService } from './momo/momo.service';
 import { ZalopayController } from './zalopay/zalopay.controller';
 import { ZalopayService } from './zalopay/zalopay.service';
+import { TransactionController } from './transaction/transaction.controller';
+import { TransactionService } from './transaction/transaction.service';
 
 @Module({
   imports: [
@@ -24,7 +26,14 @@ import { ZalopayService } from './zalopay/zalopay.service';
     VnpayController,
     MomoController,
     ZalopayController,
+    TransactionController,
   ],
-  providers: [PaymentService, VnpayService, MomoService, ZalopayService],
+  providers: [
+    PaymentService,
+    VnpayService,
+    MomoService,
+    ZalopayService,
+    TransactionService,
+  ],
 })
 export class PaymentServiceModule {}

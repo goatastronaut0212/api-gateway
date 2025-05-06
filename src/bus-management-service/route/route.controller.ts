@@ -35,7 +35,6 @@ export class RouteController {
   }
   @Get('get-routes-name-by-company/:id')
   getRouteName(@Param('id') id: number) {
-    console.log('Sending request to Service:', id);
     return this.routeService.getRouteName(id);
   }
 
